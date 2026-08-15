@@ -25,6 +25,14 @@ If no, that passage is chain-of-thought leakage. `cot-lint` finds it.
 
 ## Quick start
 
+**DeepSeek Harness** — install the `cot-trim` fixing skill as a plugin:
+
+```sh
+dsh plugin add cot-lint
+```
+
+**Any repo or CI** — zero dependencies, Node ≥ 20:
+
 ```sh
 npx cot-lint                 # scan the repo (Markdown and prose files)
 npx cot-lint --json          # machine-readable findings for CI or agents
@@ -32,7 +40,7 @@ npx cot-lint --ext ts,py     # also scan source files line-by-line
 npx cot-lint --hidden        # descend into dot-directories such as .agents/
 ```
 
-Zero dependencies. Node ≥ 20. Exit codes: `0` clean · `1` findings · `2` usage error — drop it straight into CI.
+Exit codes: `0` clean · `1` findings · `2` usage error — drop it straight into CI.
 
 ## What it detects
 

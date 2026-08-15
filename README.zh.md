@@ -25,6 +25,14 @@
 
 ## 快速开始
 
+**DeepSeek Harness** —— 以插件形式装入 `cot-trim` 修复技能：
+
+```sh
+dsh plugin add cot-lint
+```
+
+**任何仓库 / CI** —— 零依赖，Node ≥ 20：
+
 ```sh
 npx cot-lint                 # 扫描整个仓库（Markdown 等文本文件）
 npx cot-lint --json          # 输出 JSON，供 CI 或 agent 消费
@@ -32,7 +40,7 @@ npx cot-lint --ext ts,py     # 同时逐行扫描源码文件
 npx cot-lint --hidden        # 进入 .agents/ 等点开头目录
 ```
 
-零依赖，Node ≥ 20。退出码：`0` 干净 · `1` 有发现 · `2` 用法错误——可直接接入 CI。
+退出码：`0` 干净 · `1` 有发现 · `2` 用法错误——可直接接入 CI。
 
 ## 检测什么
 
