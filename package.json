@@ -1,14 +1,22 @@
 {
   "name": "cot-lint",
-  "version": "0.1.0",
-  "description": "Lint your repo for chain-of-thought leakage — the session-transcript residue AI assistants leave in docs, comments, and commit-adjacent prose.",
+  "version": "0.2.0",
+  "description": "Lint your repo for chain-of-thought leakage — the session-transcript residue AI assistants leave in docs, comments, and commit-adjacent prose. Ships the cot-trim skill as an installable DeepSeek Harness plugin.",
   "type": "module",
+  "main": "./index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "cot-lint": "src/cli.js"
   },
   "files": [
     "src",
-    "skill"
+    "skills",
+    "index.mjs",
+    "cordis.patch.yml"
   ],
   "engines": {
     "node": ">=20"
@@ -23,12 +31,19 @@
     "documentation",
     "comments",
     "claude-code",
-    "deepseek-harness"
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YuanyuanMa03/cot-lint.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
   },
   "scripts": {
     "test": "node test/smoke.mjs"

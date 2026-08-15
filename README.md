@@ -61,7 +61,12 @@ The keep-rules are half the tool. A zero-treatment linter that deletes `RFC 9110
 
 ## Fixing, not just finding
 
-The repo ships [`cot-trim`](skill/SKILL.md), an agent skill that pairs with the CLI: it runs `cot-lint --json`, judges every hit against the one test, enumerates the passage's propositions before deleting anything, and fixes owner-first (generated files via their source, model-visible strings via their owning snapshot). Copy it into your agent's skills directory — `.agents/skills/` for DeepSeek Harness, `~/.claude/skills/` for Claude Code, or wherever your agent looks.
+The repo ships [`cot-trim`](skills/cot-trim/SKILL.md), an agent skill that pairs with the CLI: it runs `cot-lint --json`, judges every hit against the one test, enumerates the passage's propositions before deleting anything, and fixes owner-first (generated files via their source, model-visible strings via their owning snapshot).
+
+Install it where your agent looks for skills:
+
+- **DeepSeek Harness**: `dsh plugin add cot-lint` (or `github:YuanyuanMa03/cot-lint`) — the `cot-trim` skill loads through the plugin's skill provider.
+- **Claude Code / generic agents**: copy `skills/cot-trim/` into your skills directory (`~/.claude/skills/`, `.agents/skills/`, or wherever your agent looks).
 
 ## How this differs from "AI slop" style linters
 

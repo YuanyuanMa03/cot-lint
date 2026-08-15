@@ -1,0 +1,6 @@
+# DSH bundle profile patch.
+# Install: dsh plugin add cot-lint
+# (or github:YuanyuanMa03/cot-lint / link:/path/to/cot-lint)
+- insert:
+    - id: cot-lint
+      name: 'cot-lint'

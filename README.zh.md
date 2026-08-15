@@ -61,7 +61,10 @@ npx cot-lint --hidden        # 进入 .agents/ 等点开头目录
 
 ## 不止发现，还要修复
 
-仓库内置 [`cot-trim`](skill/SKILL.md) agent skill，与 CLI 配合使用：它运行 `cot-lint --json`，用"唯一测试"逐条判断，删除前先枚举段落里的全部命题，并按属主优先修复（生成文件改源头、模型可见字符串走所属快照）。把它复制进你的 agent skills 目录即可——DeepSeek Harness 用 `.agents/skills/`，Claude Code 用 `~/.claude/skills/`，或你的 agent 约定的位置。
+仓库内置 [`cot-trim`](skills/cot-trim/SKILL.md) agent skill，与 CLI 配合使用：它运行 `cot-lint --json`，用"唯一测试"逐条判断，删除前先枚举段落里的全部命题，并按属主优先修复（生成文件改源头、模型可见字符串走所属快照）。
+
+- **DeepSeek Harness**：`dsh plugin add cot-lint`（或 `github:YuanyuanMa03/cot-lint`）——`cot-trim` skill 通过插件的 skill provider 加载。
+- **Claude Code / 通用 agent**：把 `skills/cot-trim/` 复制进你的 agent skills 目录（`~/.claude/skills/`、`.agents/skills/` 或你的 agent 约定的位置）。
 
 ## 与"AI 文风检测器"的区别
 
