@@ -1,0 +1,36 @@
+{
+  "name": "cot-lint",
+  "version": "0.1.0",
+  "description": "Lint your repo for chain-of-thought leakage — the session-transcript residue AI assistants leave in docs, comments, and commit-adjacent prose.",
+  "type": "module",
+  "bin": {
+    "cot-lint": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "skill"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "lint",
+    "linter",
+    "ai",
+    "agents",
+    "chain-of-thought",
+    "prose",
+    "documentation",
+    "comments",
+    "claude-code",
+    "deepseek-harness"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuanyuanMa03/cot-lint.git"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  }
+}
