@@ -1,6 +1,6 @@
 {
   "name": "cot-lint",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lint your repo for chain-of-thought leakage — the session-transcript residue AI assistants leave in docs, comments, and commit-adjacent prose. Ships the cot-trim skill as an installable DeepSeek Harness plugin.",
   "type": "module",
   "main": "./index.mjs",
