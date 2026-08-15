@@ -65,7 +65,7 @@ The keep-rules are half the tool. A zero-treatment linter that deletes `RFC 9110
 - `§`-references on lines that cite an external standard such as an RFC,
 - lines carrying a `cot-lint-ignore` suppression — keep the reason next to it.
 
-**Batteries over-match by design.** Every finding is a candidate, not a verdict; the [keep-rules and rewrite method](skill/SKILL.md) decide what survives.
+**Batteries over-match by design.** Every finding is a candidate, not a verdict; the [keep-rules and rewrite method](skills/cot-trim/SKILL.md) decide what survives.
 
 ## Fixing, not just finding
 
